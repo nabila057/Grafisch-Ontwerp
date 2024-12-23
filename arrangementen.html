@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrangementen - Feast</title>
+    
+    <!-- Link naar CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // JavaScript om de header en footer in te laden
+        function loadHeaderFooter() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+    </script>
+</head>
+
+<body onload="loadHeaderFooter()">
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Arrangementen sectie -->
+    <section class="arrangementen py-5">
+        <div class="container">
+            <h1 class="text-center">Onze Arrangementen</h1>
+            <p class="text-center">Kies uit onze unieke arrangementen voor zowel particulieren als zakelijke evenementen.</p>
+            
+            <!-- Grid layout voor particulieren en zakelijke arrangementen -->
+            <div class="row">
+                <!-- Particuliere arrangementen -->
+                <div class="col-md-5">
+                    <h2 class="text-center">Particuliere Arrangementen</h2>
+                    <div class="grid-container">
+                        <!-- Arrangement 1 -->
+                        <div class="grid-item">
+                            <img src="images/eten.jpg" alt="Wildproeverij" class="img-fluid">
+                            <h5>Wildproeverij</h5>
+                            <p>Geniet van een unieke proeverij met de beste wildgerechten. Ideaal voor familie en vrienden.</p>
+                            <a href="inschrijven.html" class="btn" style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                        <!-- Arrangement 2 -->
+                        <div class="grid-item">
+                            <img src="images/afbeelding1.jpg" alt="Exclusief Arrangement" class="img-fluid">
+                            <h5>Exclusief Arrangement</h5>
+                            <p>Een luxe ervaring op een prachtige locatie, inclusief culinaire hoogstandjes.</p>
+                            <a href="inschrijven.html" class="btn" style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                        <!-- Arrangement 3 (nieuw) -->
+                        <div class="grid-item">
+                            <img src="images/familiefeest.jpg" alt="Familiefeest" class="img-fluid">
+                            <h5>Familiefeest</h5>
+                            <p>Vier samen met je familie een gezellig feest met heerlijke gerechten en activiteiten.</p>
+                            <a href="inschrijven.html" class="btn" style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Verticaal scheidingslijn -->
+                <div class="col-md-1 divider-container">
+                    <div class="divider"></div>
+                </div>
+
+                <!-- Zakelijke arrangementen -->
+                <div class="col-md-5">
+                    <h2 class="text-center">Zakelijke Arrangementen</h2>
+                    <div class="grid-container">
+                        <!-- Arrangement 1 -->
+                        <div class="grid-item">
+                            <img src="images/culinair.jpg" alt="Culinaire Ervaring" class="img-fluid">
+                            <h5>Culinaire Ervaring</h5>
+                            <p>Laat je team genieten van een op maat gemaakte culinaire ervaring.</p>
+                            <a href="inschrijven.html" class="btn" style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                        <!-- Arrangement 2 -->
+                        <div class="grid-item">
+                            <img src="images/teambuild.jpg" alt="Teambuilding Arrangement" class="img-fluid">
+                            <h5>Teambuilding Arrangement</h5>
+                            <p>Versterk de samenwerking binnen je team met een inspirerend teambuilding programma.</p>
+                            <a href="inschrijven.html" class="btn" style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                        <!-- Arrangement 3 (nieuw) -->
+                        <div class="grid-item">
+                            <img src="images/networking.jpg" alt="Networking Event" class="img-fluid">
+                            <h5>Networking Event</h5>
+                            <p>Verbind met andere professionals tijdens ons exclusieve networking evenement.</p>
+                            <a href="inschrijven.html" class="btn" style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+</body>
+
+</html>

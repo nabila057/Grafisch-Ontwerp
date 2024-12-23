@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Feast</title>
+
+    <!-- Link naar CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // JavaScript om de header en footer in te laden
+        function loadHeaderFooter() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+    </script>
+</head>
+
+<body onload="loadHeaderFooter()">
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Blog Sectie -->
+    <section class="blog py-5">
+        <div class="container">
+            <h1 class="text-center">Onze Blog</h1>
+            <p class="text-center">Lees meer over onze unieke arrangementen, culinaire ervaringen en het laatste nieuws.
+            </p>
+
+            <!-- Blog Posts -->
+            <div class="row">
+                <!-- Blog Post 1 -->
+                <div class="col-12 mb-4">
+                    <div class="blog-item">
+                        <div class="image-container">
+                            <img src="images/blog1.jpg" alt="Blog Post 1" class="img-fluid">
+                        </div>
+                        <div class="blog-content">
+                            <h5>Wildproeverij: Een Unieke Culinaire Ervaring</h5>
+                            <p>Ontdek de heerlijke smaken van de natuur met onze wildproeverij arrangementen. Een
+                                ervaring die je niet snel zult vergeten!</p>
+                            <!-- Eerste blogpost -->
+                            <a href="blog-detail1.html" class="btn"
+                                style="background-color: #BF8268; color: white;">Lees Meer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="col-12 mb-4">
+                    <div class="blog-item">
+                        <div class="image-container">
+                            <img src="images/blog2.jpg" alt="Blog Post 2" class="img-fluid">
+                        </div>
+                        <div class="blog-content">
+                            <h5>Exclusieve Arrangementen voor Groepen</h5>
+                            <p>Onze exclusieve arrangementen zijn perfect voor groepen die op zoek zijn naar een luxe
+                                ervaring in een prachtige omgeving.</p>
+                            <!-- Tweede blogpost -->
+                            <a href="blog-detail2.html" class="btn"
+                                style="background-color: #BF8268; color: white;">Lees Meer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Blog Post 3 -->
+                <div class="col-12 mb-4">
+                    <div class="blog-item">
+                        <div class="image-container">
+                            <img src="images/blog3.jpg" alt="Blog Post 3" class="img-fluid">
+                        </div>
+                        <div class="blog-content">
+                            <h5>Culinaire Ervaringen voor Bedrijven</h5>
+                            <p>Verwen je medewerkers of klanten met een op maat gemaakte culinaire ervaring. Een
+                                uitstekende keuze voor zakelijke evenementen!</p>
+                            <!-- Derde blogpost -->
+                            <a href="blog-detail3.html" class="btn"
+                                style="background-color: #BF8268; color: white;">Lees Meer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="col-12 mb-4">
+                    <div class="blog-item">
+                        <div class="image-container">
+                            <img src="images/blog4.jpg" alt="Blog Post 4" class="img-fluid">
+                        </div>
+                        <div class="blog-content">
+                            <h5>Teambuilding in de Natuur</h5>
+                            <p>Boost de samenwerking in je team met onze teambuilding arrangementen, gecombineerd met de
+                                schoonheid van de natuur.</p>
+                            <!-- Vierde blogpost -->
+                            <a href="blog-detail4.html" class="btn"
+                                style="background-color: #BF8268; color: white;">Lees Meer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+</body>
+
+</html>

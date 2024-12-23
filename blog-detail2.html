@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusief Arrangement voor Groepen - Feast</title>
+    
+    <!-- Link naar CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // JavaScript om de header en footer in te laden
+        function loadHeaderFooter() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+    </script>
+</head>
+
+<body onload="loadHeaderFooter()">
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Blog Detail Sectie -->
+    <section class="blog-detail py-5">
+        <div class="container">
+            <h1 class="text-center">Exclusief Arrangement voor Groepen</h1>
+            <div class="image-container mb-4">
+                <img src="images/eten.jpg" alt="Exclusief Arrangement voor Groepen" class="img-fluid">
+            </div>
+            <p>Ons exclusieve arrangement voor groepen biedt een unieke ervaring waarbij je samen met vrienden, familie of collega’s kunt genieten van luxe en op maat gemaakte diensten. Dit arrangement is ideaal voor groepen die op zoek zijn naar iets bijzonders en exclusiefs.</p>
+            <p>Van privé dineren tot luxe accommodatie en activiteiten, we zorgen ervoor dat elke detail van je verblijf volledig op jouw wensen is afgestemd. Dit arrangement is geschikt voor groepen van verschillende groottes en biedt een luxe ervaring die niemand zal vergeten.</p>
+            <p>Of je nu een zakelijke bijeenkomst, een familieweekend of een vriendenuitje plant, dit arrangement biedt alles wat je nodig hebt voor een onvergetelijke ervaring. Neem contact met ons op voor meer informatie en reserveringen.</p>
+            <a href="arrangementen.html" class="btn" style="background-color: #BF8268; color: white;">Bekijk onze Arrangementen</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+</body>
+
+</html>

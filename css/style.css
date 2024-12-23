@@ -1,0 +1,246 @@
+body {
+    background-color: #F2F1EB;
+}
+
+.navbar {
+    background-color: #24323D; /* Donkere achtergrondkleur */
+}
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* Witte tekstkleur voor de links */
+}
+.navbar-nav .nav-link:hover {
+    color: #f1c40f !important; /* Gouden kleur bij hover voor een visueel effect */
+}
+
+.navbar-brand img {
+    width: 70px; /* Pas de breedte van het logo aan naar wens */
+    height: auto;
+}
+
+/* Knoppenstijl voor Login en Registreer */
+.navbar .btn {
+    font-size: 14px;
+    border-radius: 20px; /* Maak de knoppen afgerond */
+    padding: 8px 20px; /* Zorg voor een nettere padding */
+}
+
+.navbar .btn-light {
+    background-color: #fff;
+    color: #24323D; /* Zorg ervoor dat de knop dezelfde kleur heeft als de tekst in de navigatie */
+    border: 1px solid #ddd;
+}
+
+.navbar .btn-light:hover {
+    background-color: #f8f9fa; /* Lichte hover effect */
+}
+
+.navbar .btn-outline-light {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: #fff;
+    color: #24323D; /* Hover kleur verandert naar donkerblauw */
+}
+
+/* Zorg ervoor dat de social media iconen naast elkaar staan */
+.social-icons {
+    display: flex; /* Zet de iconen naast elkaar */
+    justify-content: start; /* Zorg ervoor dat ze aan de linkerzijde uitgelijnd zijn */
+    gap: 20px; /* Voeg wat ruimte toe tussen de iconen */
+    margin-top: 10px; /* Voeg wat ruimte toe boven de iconen */
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #00aced; /* Kies een kleur voor hover, bijvoorbeeld Twitter blauw */
+}
+
+/* Algemene instellingen voor de afbeeldingen */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Stel een consistente hoogte in */
+    overflow: hidden;
+    border-radius: 10px; /* Optioneel voor afgeronde hoeken */
+    background-color: #f0f0f0; /* Achtergrondkleur als een afbeelding ontbreekt */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding bijgesneden wordt */
+    object-position: center; /* Focus op het midden van de afbeelding */
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Zoom in effect */
+}
+
+.image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.image-container .overlay .btn {
+    padding: 10px 20px;
+    background-color: #24323D; /* Kleurt de knop in de juiste kleur */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.image-container .overlay .btn:hover {
+    background-color: #1e2a30; /* Donkerder bij hover */
+}
+
+/* Layout voor afbeeldingen en tekst ernaast */
+.text-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text-container h5 {
+    font-size: 1.25rem;
+    color: #24323D;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Zorg ervoor dat de afbeeldingen en tekst netjes onder elkaar staan bij mobiel */
+@media (max-width: 767px) {
+    .image-text-section .row {
+        display: block;
+    }
+
+    .image-text-section .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Verwijder flexbox en gebruik grid voor de arrangementen */
+.arrangementen .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* De grid-items zijn de individuele arrangementen */
+.grid-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Verticaal scheidingslijn */
+.divider-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.divider {
+    width: 2px;
+    height: 100%;
+    background-color: #BF8268;
+}
+
+/* Blog Sectie */
+.blog {
+    background-color: #F2F1EB;
+}
+
+.blog-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.blog-item .image-container {
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.blog-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-content h5 {
+    font-size: 1.5rem;
+    color: #24323D;
+    margin-top: 15px;
+}
+
+.blog-content p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.blog-content .btn {
+    background-color: #BF8268;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.blog-content .btn:hover {
+    background-color: #a26f5f;
+}
+
+/* Zorg ervoor dat de blog posts netjes onder elkaar staan op mobiel */
+@media (max-width: 767px) {
+    .blog-item {
+        margin-bottom: 20px;
+    }
+}
+

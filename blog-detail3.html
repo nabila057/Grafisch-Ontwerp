@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinaire Ervaringen voor Bedrijven - Feast</title>
+    
+    <!-- Link naar CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // JavaScript om de header en footer in te laden
+        function loadHeaderFooter() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+    </script>
+</head>
+
+<body onload="loadHeaderFooter()">
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Blog Detail Sectie -->
+    <section class="blog-detail py-5">
+        <div class="container">
+            <h1 class="text-center">Culinaire Ervaringen voor Bedrijven</h1>
+            <div class="image-container mb-4">
+                <img src="images/culinair.jpg" alt="Culinaire Ervaringen voor Bedrijven" class="img-fluid">
+            </div>
+            <p>Onze culinaire ervaringen voor bedrijven zijn de perfecte manier om je team te belonen, relaties te versterken of een speciale gelegenheid te vieren. Dit arrangement biedt een combinatie van heerlijk eten, exclusieve locaties en een unieke sfeer die je bedrijf zal inspireren.</p>
+            <p>Van interactieve kookworkshops tot luxe diners met bijpassende wijnen, we zorgen voor een ervaring die niet alleen lekker is, maar ook de teamgeest versterkt. Het is de ideale manier om je collega's of klanten te laten zien hoeveel je ze waardeert.</p>
+            <p>Of je nu een bedrijfsfeest, een teamuitje of een klantenevenement organiseert, onze culinaire ervaringen bieden een unieke manier om verbinding te maken en te genieten van de beste gerechten.</p>
+            <a href="arrangementen.html" class="btn" style="background-color: #BF8268; color: white;">Bekijk onze Arrangementen</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+</body>
+
+</html>

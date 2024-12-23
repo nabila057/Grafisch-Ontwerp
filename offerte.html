@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feast</title>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // JavaScript om de header in te laden
+        function loadHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Verander dit naar het juiste id in de index.html
+                    document.getElementById('header-container').innerHTML = data;
+                });
+        }
+
+        // JavaScript om de footer in te laden
+        function loadFooter() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        }
+    </script>
+</head>
+<body onload="loadHeader(); loadFooter();">
+    
+    <!-- Container waar de header geladen wordt -->
+    <div id="header-container"></div>
+
+    <!-- Container waar de footer geladen wordt -->
+    <div id="footer-container"></div>
+
+</body>
+</html>

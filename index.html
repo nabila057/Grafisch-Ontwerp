@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Feast</title>
+    
+    <!-- Link naar externe CSS-bestanden -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // JavaScript om de header in te laden
+        function loadHeader() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+        }
+    </script>
+</head>
+
+<body onload="loadHeader()">
+    <!-- Header container -->
+    <div id="header-container"></div>
+
+    <!-- Hoofdcontent van de Home-pagina -->
+    <section class="home-intro text-center" style="background-color: #24323D; color: white; padding: 50px 0;">
+        <div class="container">
+            <h1>Welkom bij Feast!</h1>
+            <p>Ontdek onze unieke wildproeverijen en arrangementen voor een onvergetelijke ervaring.</p>
+            <a href="arrangementen.html" class="btn btn-light">Bekijk onze arrangementen</a>
+        </div>
+    </section>
+
+    <!-- Sectie met afbeeldingen en tekst ernaast -->
+    <section class="image-text-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Eerste afbeelding met tekst ernaast -->
+                <div class="col-md-4 mb-4">
+                    <div class="image-container">
+                        <img src="images/eten.jpg" alt="Wildproeverij" class="img-fluid">
+                        <div class="overlay">
+                            <a href="arrangementen.html" class="btn btn-light">Klik voor meer informatie</a>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <h5>Wildproeverij Arrangement</h5>
+                        <p>Ervaar de beste wildgerechten met onze arrangementen, ideaal voor groepen en feesten.</p>
+                    </div>
+                </div>
+
+                <!-- Tweede afbeelding met tekst ernaast -->
+                <div class="col-md-4 mb-4">
+                    <div class="image-container">
+                        <img src="images/afbeelding1.jpg" alt="Arrangementen" class="img-fluid">
+                        <div class="overlay">
+                            <a href="arrangementen.html" class="btn btn-light">Klik voor meer informatie</a>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <h5>Exclusieve Arrangementen</h5>
+                        <p>Geniet van de mooiste locaties en culinaire hoogstandjes met onze exclusieve arrangementen.</p>
+                    </div>
+                </div>
+
+                <!-- Derde afbeelding met tekst ernaast -->
+                <div class="col-md-4 mb-4">
+                    <div class="image-container">
+                        <img src="images/culinair.jpg" alt="Culinaire Ervaring" class="img-fluid">
+                        <div class="overlay">
+                            <a href="arrangementen.html" class="btn btn-light">Klik voor meer informatie</a>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <h5>Culinaire Ervaring</h5>
+                        <p>Beleef een onvergetelijke culinaire ervaring met onze op maat gemaakte arrangementen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer container -->
+    <div id="footer-container"></div>
+
+    <script>
+        // JavaScript om de footer in te laden
+        function loadFooter() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        }
+        
+        // Laad de footer zodra de pagina geladen is
+        window.onload = function() {
+            loadHeader();
+            loadFooter();
+        };
+    </script>
+</body>
+
+</html>

@@ -1,2 +1,2 @@
 # Grafisch-Ontwerp
-Examen
+Examen voor Grafisch Ontwerp
