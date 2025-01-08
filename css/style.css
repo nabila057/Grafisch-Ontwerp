@@ -366,3 +366,97 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+/* Algemene sectie voor Login en Registreer */
+/* Algemene sectie voor Login en Registreer */
+section.login, section.registreer {
+    background-color: #F2F1EB;
+    padding: 60px 0;
+}
+
+section.login .container, section.registreer .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff; /* Witte achtergrond voor de container */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #24323D;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Formulier styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.125rem;
+    color: #24323D;
+}
+
+.form-control {
+    width: 100%; /* Zorgt ervoor dat de inputvelden even breed zijn */
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    border-color: #BF8268; /* Warme bruine kleur */
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(191, 130, 104, 0.5);
+}
+
+/* Stijlen voor de registratie en login sectie knoppen */
+button.btn, .btn-primary {
+    background-color: #24323D; /* Donkerblauw */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Zorgt ervoor dat de knop dezelfde breedte heeft als de inputvelden */
+}
+
+button.btn:hover, .btn-primary:hover {
+    background-color: #1e2a30; /* Donkerder blauw bij hover */
+}
+
+/* Donkerblauw voor de "Registreer hier" link */
+.text-center a {
+    color: #24323D; /* Donkerblauw */
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+    color: #1e2a30; /* Donkerder blauw bij hover */
+}
+
+/* Responsive voor login en registratie */
+@media (max-width: 767px) {
+    section.login, section.registreer {
+        padding: 20px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .form-control {
+        padding: 10px;
+    }
+
+    button.btn {
+        padding: 10px 15px;
+    }
+}

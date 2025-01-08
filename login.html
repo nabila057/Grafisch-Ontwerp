@@ -1,39 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Feast</title>
-        <link rel="icon" href="images/favicon-32x32.png" type="image/png">
-    
-        <link rel="stylesheet" href="css/style.css">
-        <script>
-            // JavaScript om de header in te laden
-            function loadHeader() {
-                fetch('header.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        // Verander dit naar het juiste id in de index.html
-                        document.getElementById('header-container').innerHTML = data;
-                    });
-            }
-    
-            // JavaScript om de footer in te laden
-            function loadFooter() {
-                fetch('footer.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('footer-container').innerHTML = data;
-                    });
-            }
-        </script>
-    </head>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Feast</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript om de header en footer in te laden -->
+    <script>
+        function loadHeaderFooter() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+    </script>
+</head>
+
 <body onload="loadHeaderFooter()">
+    <!-- Header -->
+    <div id="header-container"></div>
 
-<div id="header-container"></div>
+    <!-- Login Sectie -->
+    <section class="login py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">Inloggen</h1>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="Voer je e-mail in">
+                </div>
+                <div class="form-group">
+                    <label for="password">Wachtwoord</label>
+                    <input type="password" class="form-control" id="password" placeholder="Voer je wachtwoord in">
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary btn-block">Inloggen</button>
+                </div>
+                <div class="text-center">
+                    <p>Heb je nog geen account? <a href="registreer.html">Registreer hier</a></p>
+                </div>
+            </form>
+        </div>
+    </section>    
 
-
-
-<div id="footer-container"></div>
+    <!-- Footer -->
+    <div id="footer-container"></div>
 </body>
+
 </html>
