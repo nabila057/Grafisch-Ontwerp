@@ -1,40 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feast</title>
-    <link rel="icon" href="images/favicon-32x32.png" type="image/png">
-
+    <title>Over Ons - Feast</title>
+    
+    <!-- Link naar CSS -->
     <link rel="stylesheet" href="css/style.css">
     <script>
-        // JavaScript om de header in te laden
-        function loadHeader() {
+        // JavaScript om de header en footer in te laden
+        function loadHeaderFooter() {
             fetch('header.html')
                 .then(response => response.text())
-                .then(data => {
-                    // Verander dit naar het juiste id in de index.html
-                    document.getElementById('header-container').innerHTML = data;
-                });
-        }
+                .then(data => document.getElementById('header-container').innerHTML = data);
 
-        // JavaScript om de footer in te laden
-        function loadFooter() {
             fetch('footer.html')
                 .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                });
+                .then(data => document.getElementById('footer-container').innerHTML = data);
         }
     </script>
 </head>
-<body onload="loadHeader(); loadFooter();">
-    
-    <!-- Container waar de header geladen wordt -->
+
+<body onload="loadHeaderFooter()">
+    <!-- Header -->
     <div id="header-container"></div>
 
-    <!-- Container waar de footer geladen wordt -->
-    <div id="footer-container"></div>
+    <!-- Over Ons Sectie -->
+    <section class="over-ons py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h1 class="text-center mb-4">Over Feast</h1>
+                    <p class="lead text-center">Welkom bij Feast, waar natuur, avontuur en culinaire hoogstandjes samenkomen. Gelegen in het hart van de Veluwe, bieden wij unieke ervaringen voor zowel particulieren als bedrijven. Ontdek, proef en beleef de natuur op een manier die je niet snel zult vergeten.</p>
+                    
+                    <!-- Visuele sectie -->
+                    <div class="row mb-5">
+                        <div class="col-md-6">
+                            <img src="images/team.jpg" alt="Ons Team" class="img-fluid rounded shadow">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="mt-4 mt-md-0">Onze Missie</h3>
+                            <p>Bij Feast draait alles om het verbinden van mensen met de natuur. Wij bieden een breed scala aan arrangementen die volledig op maat zijn gemaakt, zodat elk evenement speciaal en onvergetelijk is. Of het nu gaat om een wildsafari, een culinaire ervaring of een teambuilding, wij zorgen ervoor dat je avontuur perfect wordt afgestemd op jouw wensen.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Wat maakt ons anders? -->
+                    <div class="features mb-5">
+                        <h3 class="text-center mb-4">Wat maakt ons anders?</h3>
+                        <div class="row">
+                            <div class="col-md-4 feature-item">
+                                <i class="fas fa-handshake fa-3x mb-3"></i>
+                                <h5>Persoonlijke Benadering</h5>
+                                <p>Wij zorgen ervoor dat elk arrangement volledig aansluit bij de wensen van onze gasten, zodat elke ervaring uniek is.</p>
+                            </div>
+                            <div class="col-md-4 feature-item">
+                                <i class="fas fa-leaf fa-3x mb-3"></i>
+                                <h5>Natuur en Cultuur</h5>
+                                <p>Onze arrangementen bieden een perfecte combinatie van natuur, avontuur en cultuur, zodat je de Veluwe op een bijzondere manier leert kennen.</p>
+                            </div>
+                            <div class="col-md-4 feature-item">
+                                <i class="fas fa-utensils fa-3x mb-3"></i>
+                                <h5>Authentieke Ervaringen</h5>
+                                <p>Van wildgerechten tot natuurwandelingen, onze ervaringen zijn altijd authentiek en bieden een diepere verbinding met de omgeving.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Waarom kiezen voor ons? -->
+                    <h3 class="text-center mb-4">Waarom kiezen voor Feast?</h3>
+                    <p>Bij Feast geloven we in het creëren van onvergetelijke ervaringen. Of je nu op zoek bent naar een zakelijke bijeenkomst, een avontuurlijk uitje of een romantisch diner in de natuur, wij zorgen ervoor dat jouw ervaring bij ons een blijvende indruk maakt. Onze combinatie van natuur, avontuur en gastronomie maakt ons uniek.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <div id="footer-container"></div>
 </body>
+
 </html>

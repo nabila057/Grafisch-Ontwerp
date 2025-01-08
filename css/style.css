@@ -244,3 +244,125 @@ body {
     }
 }
 
+/* Over Ons Sectie */
+/* Over Ons Sectie */
+.over-ons {
+    background-color: #F2F1EB;
+    padding: 60px 0;
+}
+
+.over-ons .container {
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.over-ons h1 {
+    font-size: 2.5rem;
+    color: #24323D;
+    margin-bottom: 20px;
+}
+
+.over-ons p {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.over-ons .lead {
+    font-size: 1.25rem;
+    color: #24323D;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.over-ons h3 {
+    font-size: 1.75rem;
+    color: #24323D;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.over-ons ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.over-ons ul li {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Visuele sectie met afbeelding */
+.row img {
+    max-height: 300px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Features sectie */
+.features {
+    background-color: #F9F9F9;
+    padding: 40px 0;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-item i {
+    color: #BF8268;
+}
+
+.feature-item h5 {
+    font-size: 1.25rem;
+    color: #24323D;
+    margin-top: 20px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Verander de tekstgrootte en het uiterlijk van de iconen */
+.features i {
+    font-size: 3rem;
+    color: #BF8268;
+}
+
+/* Footer styling */
+footer {
+    background-color: #24323D;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Responsief ontwerp */
+@media (max-width: 767px) {
+    .over-ons .container {
+        padding: 20px;
+    }
+
+    .over-ons h1 {
+        font-size: 2rem;
+    }
+
+    .over-ons h3 {
+        font-size: 1.5rem;
+    }
+
+    .over-ons p, .over-ons ul li {
+        font-size: 1rem;
+    }
+
+    .feature-item {
+        margin-bottom: 20px;
+    }
+}

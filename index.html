@@ -8,19 +8,42 @@
     
     <!-- Link naar externe CSS-bestanden -->
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script>
-        // JavaScript om de header in te laden
+        // JavaScript om de header en footer in te laden met foutafhandeling
         function loadHeader() {
             fetch('header.html')
-                .then(response => response.text())
+                .then(response => {
+                    if (!response.ok) throw new Error('Header not found');
+                    return response.text();
+                })
                 .then(data => {
                     document.getElementById('header-container').innerHTML = data;
-                });
+                })
+                .catch(error => console.error('Error loading header:', error));
         }
+
+        function loadFooter() {
+            fetch('footer.html')
+                .then(response => {
+                    if (!response.ok) throw new Error('Footer not found');
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+
+        // Laad de header en footer zodra de pagina geladen is
+        window.onload = function () {
+            loadHeader();
+            loadFooter();
+        };
     </script>
 </head>
 
-<body onload="loadHeader()">
+<body>
     <!-- Header container -->
     <div id="header-container"></div>
 
@@ -39,13 +62,13 @@
             <div class="row">
                 <!-- Eerste afbeelding met tekst ernaast -->
                 <div class="col-md-4 mb-4">
-                    <div class="image-container">
-                        <img src="images/eten.jpg" alt="Wildproeverij" class="img-fluid">
-                        <div class="overlay">
+                    <div class="image-container position-relative">
+                        <img src="images/eten.jpg" alt="Foto van een wildproeverij" class="img-fluid">
+                        <div class="overlay position-absolute">
                             <a href="arrangementen.html" class="btn btn-light">Klik voor meer informatie</a>
                         </div>
                     </div>
-                    <div class="text-container">
+                    <div class="text-container mt-3">
                         <h5>Wildproeverij Arrangement</h5>
                         <p>Ervaar de beste wildgerechten met onze arrangementen, ideaal voor groepen en feesten.</p>
                     </div>
@@ -53,13 +76,13 @@
 
                 <!-- Tweede afbeelding met tekst ernaast -->
                 <div class="col-md-4 mb-4">
-                    <div class="image-container">
-                        <img src="images/afbeelding1.jpg" alt="Arrangementen" class="img-fluid">
-                        <div class="overlay">
+                    <div class="image-container position-relative">
+                        <img src="images/afbeelding1.jpg" alt="Foto van exclusieve arrangementen" class="img-fluid">
+                        <div class="overlay position-absolute">
                             <a href="arrangementen.html" class="btn btn-light">Klik voor meer informatie</a>
                         </div>
                     </div>
-                    <div class="text-container">
+                    <div class="text-container mt-3">
                         <h5>Exclusieve Arrangementen</h5>
                         <p>Geniet van de mooiste locaties en culinaire hoogstandjes met onze exclusieve arrangementen.</p>
                     </div>
@@ -67,13 +90,13 @@
 
                 <!-- Derde afbeelding met tekst ernaast -->
                 <div class="col-md-4 mb-4">
-                    <div class="image-container">
-                        <img src="images/culinair.jpg" alt="Culinaire Ervaring" class="img-fluid">
-                        <div class="overlay">
+                    <div class="image-container position-relative">
+                        <img src="images/culinair.jpg" alt="Foto van een culinaire ervaring" class="img-fluid">
+                        <div class="overlay position-absolute">
                             <a href="arrangementen.html" class="btn btn-light">Klik voor meer informatie</a>
                         </div>
                     </div>
-                    <div class="text-container">
+                    <div class="text-container mt-3">
                         <h5>Culinaire Ervaring</h5>
                         <p>Beleef een onvergetelijke culinaire ervaring met onze op maat gemaakte arrangementen.</p>
                     </div>
@@ -84,23 +107,6 @@
 
     <!-- Footer container -->
     <div id="footer-container"></div>
-
-    <script>
-        // JavaScript om de footer in te laden
-        function loadFooter() {
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                });
-        }
-        
-        // Laad de footer zodra de pagina geladen is
-        window.onload = function() {
-            loadHeader();
-            loadFooter();
-        };
-    </script>
 </body>
 
 </html>
