@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardlopen werkt als medicijn tegen burn-out klachten</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <section class="blog-post-detail py-5">
+        <div class="container">
+            <h1>Hardlopen werkt als medicijn tegen burn-out klachten</h1>
+            <img src="images/hardlopen.jpg" alt="Hardlopen" class="img-fluid">
+            <div class="blog-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut mi ut turpis scelerisque lacinia. Etiam et suscipit arcu, nec auctor risus. Proin in bibendum felis. Phasellus aliquam purus et sem maximus, vel vestibulum enim sollicitudin. Vivamus nec neque felis. Cras id massa lorem. Sed egestas, risus ac fermentum lobortis, erat dui gravida metus, sed scelerisque elit eros nec sapien. Ut convallis leo ac dolor gravida, sit amet vehicula metus mollis. In sit amet neque non lorem placerat posuere. Sed id suscipit enim. Vivamus ac risus erat. Integer maximus dui ut lacus convallis malesuada.</p>
+                <p>Nam pharetra tortor sit amet nulla tincidunt, non efficitur risus varius. Nunc pretium sit amet lorem id laoreet. Integer id nisi ac magna fermentum interdum. Cras fringilla, nunc sed venenatis mollis, ante tortor fermentum eros, at pretium nulla lorem et magna. Sed viverra orci sit amet orci sollicitudin, non condimentum augue convallis. Donec vehicula ante a lectus ullamcorper, sit amet iaculis magna vehicula. Morbi faucibus orci ut dui laoreet convallis. In ut volutpat orci. Donec viverra ante ac diam pharetra, id fringilla lorem malesuada.</p>
+                <p>Fusce pretium mauris ut enim laoreet mollis. Integer nec augue ut felis auctor efficitur. Nam lacinia mi ut felis euismod, in fringilla ante efficitur. Proin maximus erat ac risus vehicula, id posuere erat vehicula. Aenean faucibus ante vel nulla auctor, ac vestibulum turpis tincidunt. Integer ut arcu euismod, hendrerit erat non, placerat lorem. Nulla facilisi. Sed ac justo a tortor posuere ullamcorper. In et orci nisi. Nam suscipit enim id risus dictum feugiat. Nulla malesuada ante at nisl varius iaculis.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script>
+        function loadHeaderFooter() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+
+        loadHeaderFooter();
+    </script>
+</body>
+
+</html>

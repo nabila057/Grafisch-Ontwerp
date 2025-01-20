@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natuur voorkomt depressie</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <section class="blog-post-detail py-5">
+        <div class="container">
+            <h1>Natuur voorkomt depressie</h1>
+            <img src="images/blogpost2.png" alt="Veluwe" class="img-fluid">
+            <div class="blog-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt arcu ut libero ultrices, non vehicula nulla facilisis. Integer ac tellus at orci tincidunt sodales nec sed eros. Nulla eu diam nisi. Donec mollis metus nec augue malesuada vehicula. Aliquam erat volutpat. Cras faucibus libero sit amet erat tincidunt, non tristique ipsum luctus. Nulla condimentum augue id mauris luctus, ac fermentum enim euismod. Sed nec ex at purus facilisis efficitur. Sed sed ligula sed metus sollicitudin volutpat. Aliquam eget velit et nisi vestibulum fermentum vel ut justo. Pellentesque mollis sapien sed magna iaculis, in placerat eros laoreet.</p>
+                <p>Quisque convallis, lorem ac tristique viverra, velit orci cursus urna, vitae sodales velit lorem non urna. Fusce sit amet mauris augue. Pellentesque at lectus non ligula malesuada bibendum. Etiam varius lacinia massa, in suscipit orci. Nam ut semper sapien, sit amet laoreet libero. Cras ac neque ac lorem vestibulum consequat.</p>
+                <p>Curabitur ultricies mauris eget nisi condimentum, ac mollis odio vehicula. Etiam interdum nulla vitae erat fermentum, non condimentum leo bibendum. Aliquam erat volutpat. Nam lacinia velit sit amet orci dignissim, non fermentum metus tincidunt. Fusce posuere orci sit amet diam tristique feugiat. Morbi placerat metus a nisl feugiat, eu tincidunt nulla varius. Suspendisse eget felis neque. Aliquam sed arcu sit amet risus laoreet fermentum nec at lorem.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script>
+        function loadHeaderFooter() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+
+        loadHeaderFooter();
+    </script>
+</body>
+
+</html>

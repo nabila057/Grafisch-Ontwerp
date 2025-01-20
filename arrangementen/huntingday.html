@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Day - Inschrijven</title>
+    
+    <!-- Link naar CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Hunting Day Detail Sectie -->
+    <section class="arrangement-detail py-5" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h1 class="text-center mb-4">Hunting Day</h1>
+            <p class="text-center mb-5">Maak op interactieve wijze kennis met faunabeheer tijdens Hunting Day. Trek met de jager het bos in en test je schietvaardigheid tijdens de schietworkshop. Geniet na met een heerlijke proeverij van wild met bijpassende wijnen en bieren.</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../images/huntingday.jpg" alt="Hunting Day" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-md-6">
+                    <h3>Wat houdt het in?</h3>
+                    <p>Onze Hunting Day biedt een unieke ervaring waarbij je samen met een jager het bos in trekt en je schietvaardigheid test tijdens een workshop. Na afloop geniet je van een heerlijke proeverij van wild, gecombineerd met bijpassende wijnen en bieren.</p>
+                    
+                    <h3>Details:</h3>
+                    <ul>
+                        <li><strong>Locatie:</strong> In het bosgebied nabij [plaats]</li>
+                        <li><strong>Datum:</strong> Kies je gewenste datum</li>
+                        <li><strong>Prijs:</strong> Vanaf €149,99</li>
+                    </ul>
+                    
+                    <h3>Wat is inbegrepen?</h3>
+                    <ul>
+                        <li>Workshop schieten</li>
+                        <li>Proeverij van wildgerechten</li>
+                        <li>Bijpassende wijnen en bieren</li>
+                        <li>Professionele begeleiding door een jager</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Inschrijf Formulier -->
+            <div class="mt-5">
+                <h3 class="text-center">Inschrijven voor Hunting Day</h3>
+                <form action="verwerk_inschrijving.php" method="POST" class="bg-white p-4 rounded shadow-sm">
+                    <div class="form-group">
+                        <label for="naam">Naam:</label>
+                        <input type="text" id="naam" name="naam" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="aantal_personen">Aantal Personen:</label>
+                        <input type="number" id="aantal_personen" name="aantal_personen" class="form-control" required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="datum">Kies Datum:</label>
+                        <input type="date" id="datum" name="datum" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Inschrijven</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script>
+        // Laad header en footer
+        function loadHeaderFooter() {
+            fetch('../header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('../footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+
+        window.onload = loadHeaderFooter;
+    </script>
+</body>
+
+</html>

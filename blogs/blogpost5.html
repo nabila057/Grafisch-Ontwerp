@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagers: Een boswandeling verandert onze hersens positief</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <section class="blog-post-detail py-5">
+        <div class="container">
+            <h1>Jagers: Een boswandeling verandert onze hersens positief</h1>
+            <img src="images/boswandeling.jpg" alt="Boswandeling" class="img-fluid">
+            <div class="blog-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt, urna at cursus feugiat, ante eros mollis risus, ac varius sapien odio in ante. Integer vehicula magna vitae nulla posuere, vel lacinia velit dictum. In volutpat enim at dui interdum maximus. Morbi nec tempor tortor. Aenean nec magna nisl. Nulla euismod nisl in est fermentum tincidunt. Mauris at tempor odio. Suspendisse potenti. Ut posuere felis euismod ex pharetra, ac fringilla libero consequat. Nunc feugiat orci sit amet metus gravida, non malesuada ante facilisis.</p>
+                <p>Phasellus volutpat auctor est non ultricies. Nulla tincidunt magna sit amet magna viverra, at pretium libero mollis. Nulla feugiat quam a lorem varius, ac rutrum elit dapibus. Aenean volutpat tincidunt magna, sed tristique nulla fermentum ac. Etiam efficitur sollicitudin sem a mollis. Integer dictum est vel erat malesuada, ut sodales leo vulputate. Curabitur in mi ut erat laoreet vulputate. Sed nec velit a lectus lacinia egestas. Aliquam erat volutpat. Curabitur sit amet ex nec lorem laoreet viverra. Fusce vehicula felis vel velit luctus sollicitudin. Integer ut ex in tortor vulputate fringilla et sed dui.</p>
+                <p>Donec gravida justo ut odio facilisis, id condimentum augue interdum. Cras quis augue malesuada, pharetra nisi id, lobortis augue. Fusce non nulla vel turpis vehicula varius et vel turpis. Proin vulputate ipsum et nunc feugiat, non faucibus felis cursus. Suspendisse at nisi sed libero placerat tempor a vel lectus. In ultricies purus at neque facilisis, eget convallis mi venenatis. Sed lobortis augue vel elit vestibulum, a dictum lorem malesuada. Ut convallis eros sed elit sollicitudin, sit amet venenatis odio tristique. Mauris non metus ut orci dictum lobortis. Nam vel dui nec risus dictum iaculis.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script>
+        function loadHeaderFooter() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+
+        loadHeaderFooter();
+    </script>
+</body>
+
+</html>

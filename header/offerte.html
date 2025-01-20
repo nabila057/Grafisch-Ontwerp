@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feast</title>
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/png">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        // JavaScript om de header in te laden
+        function loadHeader() {
+            fetch('../header.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Verander dit naar het juiste id in de index.html
+                    document.getElementById('header-container').innerHTML = data;
+                });
+        }
+
+        // JavaScript om de footer in te laden
+        function loadFooter() {
+            fetch('../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        }
+    </script>
+</head>
+<body onload="loadHeader(); loadFooter();">
+    
+    <!-- Container waar de header geladen wordt -->
+    <div id="header-container"></div>
+
+<!-- Offerte Sectie -->
+<section class="offerte py-5">
+    <div class="container">
+        <h1 class="text-center mb-4">Offerte aanvragen</h1>
+        <p class="text-center mb-4">Vraag een offerte aan voor een arrangement bij Feast. Vul het formulier hieronder in en ontvang snel een vrijblijvende offerte.</p>
+        
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Naam</label>
+                <input type="text" class="form-control" id="name" placeholder="Voer je naam in">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Voer je e-mail in">
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefoonnummer (optioneel)</label>
+                <input type="text" class="form-control" id="phone" placeholder="Voer je telefoonnummer in">
+            </div>
+            <div class="form-group">
+                <label for="arrangement">Keuze arrangement</label>
+                <select class="form-control" id="arrangement">
+                    <option value="bedrijfsfeest">Bedrijfsfeest</option>
+                    <option value="bedrijfsjubileum">Bedrijfsjubileum</option>
+                    <option value="culinaire-workshop">Culinaire Workshop</option>
+                    <option value="familiefeest">Familiefeest</option>
+                    <option value="huntingday">Hunting Day</option>
+                    <option value="jubileum">Jubileum</option>
+                    <option value="relatie-event">Relatie-Event</option>
+                    <option value="vriendenuitje">Vrienden Uitje</option>
+
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Aankomst- en vertrekdatum</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+            <div class="form-group">
+                <label for="guests">Aantal personen</label>
+                <input type="number" class="form-control" id="guests" placeholder="Aantal personen">
+            </div>
+            <div class="form-group">
+                <label for="comments">Specifieke wensen of opmerkingen</label>
+                <textarea class="form-control" id="comments" rows="4" placeholder="Voeg eventuele opmerkingen toe"></textarea>
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary btn-block">Verstuur aanvraag</button>
+            </div>
+        </form>
+
+        <p class="text-center mt-4">Na het versturen van je aanvraag nemen wij zo snel mogelijk contact met je op om je offerte te bespreken.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+</body>
+</html>

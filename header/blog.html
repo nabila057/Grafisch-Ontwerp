@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Feast</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <section class="blog py-5">
+        <div class="container">
+            <h1 class="text-center">Blog</h1>
+            <p class="text-center">Lees de laatste artikelen over wildproeverijen, natuur en meer!</p>
+
+            <div class="row">
+                <!-- Blogpost 1 -->
+                <div class="col-md-6">
+                    <div class="blog-post">
+                        <img src="../images/blogpost1.png" alt="Wildproeverij" class="img-fluid">
+                        <h3>De bronstijd: Imponeren, burlen en vechten</h3>
+                        <p>De bronsttijd is de tijd waarin edelherten de drang voelen om te paren. Dit wordt veroorzaakt door hormonale veranderingen in het lichaam van het dier. De bronsttijd begint met het vruchtbaar worden van de hinden.</p>
+                        <p class="date">07-08-2024</p>
+                        <a href="../blogpost1.html" class="btn" style="background-color: #BF8268; color: white;">Lees meer</a>
+                    </div>
+                </div>
+
+                <!-- Blogpost 2 -->
+                <div class="col-md-6">
+                    <div class="blog-post">
+                        <img src="../images/blogpost2.png" alt="Veluwe" class="img-fluid">
+                        <h3>Natuur voorkomt depressie</h3>
+                        <p>Onderzoeker Gregory Bratman van het Amerikaanse Stanford Woods Institute for the Environment, heeft wetenschappelijk aangetoond dat natuur een positieve werking heeft op ons brein. Ook andere wetenschappers komen tot vergelijkbare conclusies.</p>
+                        <p class="date">07-12-2023</p>
+                        <a href="../blogpost2.html" class="btn" style="background-color: #BF8268; color: white;">Lees meer</a>
+                    </div>
+                </div>
+
+                <!-- Blogpost 3 -->
+                <div class="col-md-6">
+                    <div class="blog-post">
+                        <img src="../images/blogpost3.png" alt="Natuurwandeling" class="img-fluid">
+                        <h3>Het ontstaan van de Veluwe</h3>
+                        <p>Als je op de Veluwe komt dan zie je dat het vooral bestaat uit stuwwallen. Die stuwwallen zijn ongeveer 150.000 jaar geleden in de laatste ijstijd ontstaan...</p>
+                        <p class="date">07-12-2023</p>
+                        <a href="../blogpost3.html" class="btn" style="background-color: #BF8268; color: white;">Lees meer</a>
+                    </div>
+                </div>
+
+                <!-- Blogpost 4 -->
+                <div class="col-md-6">
+                    <div class="blog-post">
+                        <img src="../images/blogpost4.png" alt="Wildlife" class="img-fluid">
+                        <h3>Hardlopen werkt als medicijn tegen burn-out klachten</h3>
+                        <p>Regelmatig hardlopen werkt goed tegen werkgerelateerde vermoeidheidsklachten...</p>
+                        <p class="date">07-12-2023</p>
+                        <a href="../blogpost4.html" class="btn" style="background-color: #BF8268; color: white;">Lees meer</a>
+                    </div>
+                </div>
+
+                <!-- Blogpost 5 -->
+                <div class="col-md-6">
+                    <div class="blog-post">
+                        <img src="../images/blogpost5.png" alt="Jagers" class="img-fluid">
+                        <h3>Een boswandeling verandert onze hersens positief</h3>
+                        <p>Het lijkt misschien vanzelfsprekend dat een flinke wandeling door een bos of in de bergen je lichaam, geest en ziel reinigt...</p>
+                        <p class="date">02-12-2023</p>
+                        <a href="../blogpost5.html" class="btn" style="background-color: #BF8268; color: white;">Lees meer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // JavaScript om de header en footer in te laden
+        function loadHeaderFooter() {
+            fetch('../header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('../footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+    </script>
+    <script>
+        // Laad de header en footer bij het laden van de pagina
+        loadHeaderFooter();
+    </script>
+</body>
+
+</html>

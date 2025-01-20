@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De bronstijd: Imponeren, burlen en vechten</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <section class="blog-post-detail py-5">
+        <div class="container">
+            <h1>De bronstijd: Imponeren, burlen en vechten</h1>
+            <img src="images/blogpost1.png" alt="Wildproeverij" class="img-fluid">
+            <div class="blog-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fringilla est vitae odio posuere, in laoreet risus convallis. Nullam pharetra massa ut erat tristique, ac facilisis lorem egestas. Sed dictum, nisi eget condimentum placerat, turpis felis tempus eros, et pharetra libero ligula sed justo. Donec sollicitudin ante a turpis tempor, et sollicitudin sapien mollis. Integer sit amet nunc eu neque aliquet condimentum. Aliquam erat volutpat. Phasellus ac lorem at libero malesuada pharetra non vel libero. Mauris tincidunt sem nec risus scelerisque, ac pretium ante condimentum. Nam facilisis dui id eros hendrerit vehicula.</p>
+                <p>Curabitur auctor nisi non sem vulputate, sed pretium leo malesuada. Vivamus mollis malesuada nisi, ac vulputate purus tempor id. Integer scelerisque felis in urna posuere, non malesuada urna ultricies. Aliquam eget nisl id erat cursus mollis. Nunc tincidunt arcu vitae augue sodales, id volutpat purus viverra. Phasellus tincidunt risus ut dui tristique, in ultricies dui laoreet. Sed tincidunt felis a felis condimentum, et pharetra nunc pharetra. Nunc volutpat urna eget erat malesuada, ac dictum nulla iaculis. Cras interdum neque vitae elit posuere tempor.</p>
+                <p>Suspendisse et diam sed felis pharetra lacinia. Curabitur ac ante eget leo sollicitudin euismod. Aliquam tristique felis sit amet augue lacinia, vel dictum elit sollicitudin. Cras convallis eros non sapien auctor, at vestibulum magna gravida. Integer tincidunt odio at urna vehicula, id lobortis risus dictum. Pellentesque a purus sollicitudin, posuere ante ac, varius arcu. Ut ut suscipit ligula. Etiam nec erat vitae arcu suscipit convallis. Phasellus sit amet lectus malesuada, interdum ligula ut, viverra nulla.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script>
+        function loadHeaderFooter() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+
+        loadHeaderFooter();
+    </script>
+</body>
+
+</html>

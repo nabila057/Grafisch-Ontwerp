@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Het ontstaan van de Veluwe</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <section class="blog-post-detail py-5">
+        <div class="container">
+            <h1>Het ontstaan van de Veluwe</h1>
+            <img src="images/natuurwandeling.jpg" alt="Natuurwandeling" class="img-fluid">
+            <div class="blog-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet dui ante. Sed non fringilla ligula. Proin consequat ipsum sit amet velit vehicula, at iaculis sapien fermentum. Cras tincidunt ex vel magna tempor, a facilisis tortor tempor. Nunc non lacus lectus. Nam non erat sed lectus euismod aliquam. Integer auctor, nunc ut fringilla maximus, ligula risus convallis metus, at gravida ligula nisi id ante. Phasellus hendrerit odio vitae nisi gravida, in luctus orci sodales. Vivamus gravida odio vitae felis tincidunt, non luctus sapien egestas.</p>
+                <p>Ut varius, erat sit amet egestas condimentum, nisi velit vestibulum ligula, ac feugiat lorem nulla non ante. Etiam et malesuada orci. Fusce vehicula, tortor ut sollicitudin ullamcorper, elit purus tempus turpis, sed pretium urna felis et ipsum. Aenean mollis sollicitudin risus, non placerat orci sollicitudin et. Nam fringilla sapien ut ante pretium, sed vehicula erat consequat. Fusce viverra erat in orci sollicitudin, eget consequat mi fermentum. Donec sit amet euismod velit, et facilisis purus.</p>
+                <p>Aliquam non lacus ante. Curabitur ut lectus id ligula dapibus vehicula. Aenean auctor massa et libero sollicitudin tincidunt. In posuere magna sed odio fermentum, ac consequat lorem malesuada. Morbi sed tortor orci. Sed vitae felis tincidunt, hendrerit ipsum eget, tincidunt ligula. Cras tempor nisi vel velit facilisis, at venenatis sapien aliquet. Vivamus in dolor a dui luctus dictum.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script>
+        function loadHeaderFooter() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+
+        loadHeaderFooter();
+    </script>
+</body>
+
+</html>

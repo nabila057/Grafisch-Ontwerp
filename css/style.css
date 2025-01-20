@@ -50,10 +50,12 @@ body {
     display: flex; /* Zet de iconen naast elkaar */
     justify-content: start; /* Zorg ervoor dat ze aan de linkerzijde uitgelijnd zijn */
     gap: 20px; /* Voeg wat ruimte toe tussen de iconen */
-    margin-top: 10px; /* Voeg wat ruimte toe boven de iconen */
+    margin-top: 15px; /* Voeg wat ruimte toe boven de iconen */
+    margin-left: 110px;
 }
 
 .social-icons a {
+    margin: 0 5px;
     font-size: 24px;
     color: white;
     text-decoration: none;
@@ -168,6 +170,12 @@ body {
     text-align: center;
 }
 
+.arrangement-detail img {
+    width: 100%;
+    height: 300px; /* Pas dit aan naar de gewenste hoogte */
+    object-fit: cover /* Zorgt ervoor dat de afbeelding de container vult zonder vervorming */
+}
+
 .grid-item img {
     width: 100%;
     height: 200px;
@@ -189,72 +197,126 @@ body {
     background-color: #BF8268;
 }
 
-/* Blog Sectie */
+/* Blogpagina */
 .blog {
-    background-color: #F2F1EB;
+    background-color: #f4f4f4;
+    padding: 50px 0;
 }
 
-.blog-item {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.blog-post {
+    background-color: white;
+    border: 1px solid #ddd;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
-.blog-item .image-container {
-    height: 250px;
-    overflow: hidden;
-    border-radius: 10px;
+.blog-post img {
+    width: 100%; /* Zorgt ervoor dat de afbeeldingen de volledige breedte van hun container vullen */
+    height: 200px; /* Stel een vaste hoogte in voor consistente afbeeldingsgrootte */
+    object-fit: contain; /* Behoud de oorspronkelijke beeldverhouding zonder de afbeelding te vervormen */
+    margin-bottom: 15px; /* Ruimte onder de afbeelding */
 }
 
-.blog-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.blog-content h5 {
+.blog-post h3 {
     font-size: 1.5rem;
-    color: #24323D;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
-.blog-content p {
-    color: #555;
+.blog-post p {
     font-size: 1rem;
-    margin-bottom: 15px;
+    margin: 10px 0;
 }
 
-.blog-content .btn {
+.blog-post .btn {
+    display: inline-block;
+    padding: 10px 20px;
     background-color: #BF8268;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    margin-top: 10px;
 }
 
-.blog-content .btn:hover {
-    background-color: #a26f5f;
+.blog-post .btn:hover {
+    background-color: #A7745C;
 }
 
-/* Zorg ervoor dat de blog posts netjes onder elkaar staan op mobiel */
-@media (max-width: 767px) {
-    .blog-item {
+/* Detailpagina */
+.blog-post-detail .blog-content {
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Detailpagina */
+.blog-post-detail .blog-content img {
+    width: 100%; /* Zorgt ervoor dat de afbeeldingen de volledige breedte van hun container vullen */
+    height: 300px; /* Stel een vaste hoogte in voor consistente afbeeldingsgrootte */
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding de container vult zonder de verhoudingen te vervormen */
+    margin-bottom: 20px; /* Ruimte onder de afbeelding */
+}
+
+
+.blog-post-detail h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.blog-post-detail h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.blog-post-detail p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .blog-post {
         margin-bottom: 20px;
+    }
+
+    .blog-post img {
+        width: 100%;
+        height: 200px; /* Houd de hoogte consistent */
     }
 }
 
-/* Over Ons Sectie */
+.date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+
 /* Over Ons Sectie */
 .over-ons {
     background-color: #F2F1EB;
     padding: 60px 0;
+    width: 100%;
+}
+
+.overons {
+    display: flex;
+    align-items: stretch; /* Zorg ervoor dat de afbeelding en tekst dezelfde hoogte hebben */
+    gap: 20px; /* Ruimte tussen afbeelding en tekst */
+}
+
+.overons img {
+    width: 100%;
+    height: 100%; /* Zorg ervoor dat de afbeelding de hoogte van de container aanneemt */
+    max-width: 400px; /* Limiteer de grootte van de afbeelding voor grote schermen */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding de ruimte goed vult */
+    border-radius: 8px; /* Ronde hoeken voor de afbeelding */
+    margin-bottom: 0; /* Verwijder de marge onder de afbeelding */
 }
 
 .over-ons .container {
-    max-width: 900px;
+    max-width: 1100px; /* Verhoog de max-width voor een bredere container */
     background-color: #ffffff;
-    padding: 40px;
+    padding: 60px; /* Vergroot de padding voor meer ruimte binnen de container */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -294,14 +356,6 @@ body {
     font-size: 1.125rem;
     color: #555;
     margin-bottom: 10px;
-}
-
-/* Visuele sectie met afbeelding */
-.row img {
-    max-height: 300px;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
 }
 
 /* Features sectie */
@@ -362,12 +416,32 @@ footer {
         font-size: 1rem;
     }
 
+    .overons {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .overons img {
+        width: 80%; /* Zorg ervoor dat de afbeelding kleiner wordt op mobiele schermen */
+        max-width: 100%; /* Laat de afbeelding de breedte van het scherm vullen */
+        height: auto; /* Zorg ervoor dat de afbeelding niet te groot wordt op kleine schermen */
+        margin-bottom: 15px; /* Ruimte onder de afbeelding op mobiele schermen */
+    }
+
     .feature-item {
         margin-bottom: 20px;
     }
 }
 
-/* Algemene sectie voor Login en Registreer */
+/* Visuele sectie met afbeelding */
+.row img {
+    max-height: 300px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
 /* Algemene sectie voor Login en Registreer */
 section.login, section.registreer {
     background-color: #F2F1EB;
@@ -381,13 +455,6 @@ section.login .container, section.registreer .container {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 2rem;
-    color: #24323D;
-    margin-bottom: 30px;
-    font-weight: bold;
 }
 
 /* Formulier styling */
@@ -445,6 +512,193 @@ button.btn:hover, .btn-primary:hover {
 /* Responsive voor login en registratie */
 @media (max-width: 767px) {
     section.login, section.registreer {
+        padding: 20px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .form-control {
+        padding: 10px;
+    }
+
+    button.btn {
+        padding: 10px 15px;
+    }
+}
+
+/* Algemene sectie voor Contact */
+section.contact {
+    background-color: #F2F1EB;
+    padding: 60px 0;
+}
+
+section.contact .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff; /* Witte achtergrond voor de container */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulier styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.125rem;
+    color: #24323D;
+}
+
+.form-control {
+    width: 100%; /* Zorgt ervoor dat de inputvelden even breed zijn */
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    border-color: #BF8268; /* Warme bruine kleur */
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(191, 130, 104, 0.5);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+button.btn, .btn-primary {
+    background-color: #24323D; /* Donkerblauw */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Zorgt ervoor dat de knop dezelfde breedte heeft als de inputvelden */
+}
+
+button.btn:hover, .btn-primary:hover {
+    background-color: #1e2a30; /* Donkerder blauw bij hover */
+}
+
+/* Responsive voor contactpagina */
+@media (max-width: 767px) {
+    section.contact {
+        padding: 20px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .form-control {
+        padding: 10px;
+    }
+
+    button.btn {
+        padding: 10px 15px;
+    }
+}
+
+/* Algemene sectie voor de offertepagina */
+section.offerte {
+    background-color: #F2F1EB;
+    padding: 60px 0;
+}
+
+section.offerte .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulier styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.125rem;
+    color: #24323D;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    border-color: #BF8268; /* Warme bruine kleur */
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(191, 130, 104, 0.5);
+}
+
+/* Specifieke styling voor de select dropdown */
+select.form-control {
+    -webkit-appearance: none; /* Verwijdert standaard styling in sommige browsers */
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    padding: 12px;
+    font-size: 16px;
+    line-height: 1.25; /* Verhoogt de regelhoogte voor betere leesbaarheid */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"%3E%3Cpath d="M7 10l5 5 5-5z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    min-height: 47px; /* Minimum hoogte voor de selectbox */
+}
+
+select.form-control:focus {
+    border-color: #BF8268; /* Warme bruine kleur */
+    box-shadow: 0 0 5px rgba(191, 130, 104, 0.5);
+}
+
+/* Donkerblauw voor de knoppen */
+button.btn, .btn-primary {
+    background-color: #24323D; /* Donkerblauw */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.btn:hover, .btn-primary:hover {
+    background-color: #1e2a30; /* Donkerder blauw bij hover */
+}
+
+/* Donkerblauw voor de "Registreer hier" link */
+.text-center a {
+    color: #24323D; /* Donkerblauw */
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+    color: #1e2a30; /* Donkerder blauw bij hover */
+}
+
+/* Responsive voor de offertepagina */
+@media (max-width: 767px) {
+    section.offerte {
         padding: 20px 0;
     }
 

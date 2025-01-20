@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Feast</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- JavaScript om de header en footer in te laden -->
     <script>
         function loadHeaderFooter() {
-            fetch('header.html')
+            fetch('../header.html')
                 .then(response => response.text())
                 .then(data => document.getElementById('header-container').innerHTML = data);
 
-            fetch('footer.html')
+            fetch('../footer.html')
                 .then(response => response.text())
                 .then(data => document.getElementById('footer-container').innerHTML = data);
         }
@@ -42,7 +42,7 @@
                     <button type="submit" class="btn btn-primary btn-block">Inloggen</button>
                 </div>
                 <div class="text-center">
-                    <p>Heb je nog geen account? <a href="registreer.html">Registreer hier</a></p>
+                    <p>Heb je nog geen account? <a href="/header/registreer.html">Registreer hier</a></p>
                 </div>
             </form>
         </div>

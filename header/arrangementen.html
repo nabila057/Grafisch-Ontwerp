@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrangementen - Feast</title>
+
+    <!-- Link naar CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        // JavaScript om de header en footer in te laden
+        function loadHeaderFooter() {
+            fetch('/header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        }
+    </script>
+</head>
+
+<body onload="loadHeaderFooter()">
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Arrangementen sectie -->
+    <section class="arrangementen py-5">
+        <div class="container">
+            <h1 class="text-center">Onze Arrangementen</h1>
+            <p class="text-center">Kies uit onze unieke arrangementen voor zowel particulieren als zakelijke
+                evenementen.</p>
+
+            <!-- Grid layout voor particulieren en zakelijke arrangementen -->
+            <div class="row">
+                <!-- Particuliere arrangementen -->
+                <div class="col-md-5">
+                    <h2 class="text-center">Particuliere Arrangementen</h2>
+                    <div class="grid-container">
+                        <!-- Hunting Day -->
+                        <div class="grid-item">
+                            <img src="..//images/huntingday.jpg" alt="Hunting Day" class="img-fluid">
+                            <h5>Hunting Day</h5>
+                            <p>Leer faunabeheer kennen met een schietworkshop en geniet van een wildproeverij met
+                                bijpassende wijnen.</p>
+                            <a href="/arrangementen/huntingday.html" class="btn"
+                                style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+
+                        <!-- Andere arrangementen blijven hetzelfde -->
+                        <div class="grid-item">
+                            <img src="../images/jubileum.jpg" alt="Jubileum" class="img-fluid">
+                            <h5>Jubileum</h5>
+                            <p>Vier een speciaal jubileum met een op maat gemaakte ervaring voor jou en je dierbaren.
+                            </p>
+                            <a href="/arrangementen/jubileum.html" class="btn"
+                                style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                        <div class="grid-item">
+                            <img src="../images/familiefeest.jpg" alt="Familiefeest" class="img-fluid">
+                            <h5>Familiefeest</h5>
+                            <p>Vier samen met je familie een gezellig feest met heerlijke gerechten en activiteiten.</p>
+                            <a href="/arrangementen/familiefeest.html" class="btn"
+                                style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                        <div class="grid-item">
+                            <img src="../images/vriendenuitje.jpg" alt="Vriendenuitje" class="img-fluid">
+                            <h5>Vriendenuitje</h5>
+                            <p>Een gezellig uitje voor vrienden, met veel plezier en lekker eten in de natuur.</p>
+                            <a href="/arrangementen/vriendenuitje.html" class="btn"
+                                style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Verticaal scheidingslijn -->
+                <div class="col-md-1 divider-container">
+                    <div class="divider"></div>
+                </div>
+
+                <!-- Zakelijke arrangementen -->
+                <div class="col-md-5">
+                    <h2 class="text-center">Zakelijke Arrangementen</h2>
+                    <div class="grid-container">
+                        <!-- Andere arrangementen blijven hetzelfde -->
+                        <div class="grid-item">
+                            <img src="../images/bedrijfsfeest.jpg" alt="Bedrijfsfeest" class="img-fluid">
+                            <h5>Bedrijfsfeest</h5>
+                            <p>Een feest voor je bedrijf met geweldige catering en een unieke locatie in de natuur.</p>
+                            <a href="/arrangementen/bedrijfsfeest.html" class="btn"
+                                style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                        <div class="grid-item">
+                            <img src="../images/relatie-event.jpg" alt="Relatie-event" class="img-fluid">
+                            <h5>Relatie-event</h5>
+                            <p>Verbind met belangrijke zakelijke relaties in een inspirerende omgeving.</p>
+                            <a href="/arrangementen/relatie-event.html" class="btn"
+                                style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                        <div class="grid-item">
+                            <img src="../images/bedrijfsjubileum.jpg" alt="Bedrijfsjubileum" class="img-fluid">
+                            <h5>Bedrijfsjubileum</h5>
+                            <p>Vier het jubileum van je bedrijf met een bijzondere ervaring voor medewerkers en
+                                relaties.</p>
+                            <a href="/arrangementen/bedrijfsjubileum.html" class="btn"
+                                style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>
+                        <div class="grid-item">
+                            <img src="../images/culinaire-workshop.jpg" alt="Culinaire Workshop" class="img-fluid">
+                            <h5>Culinaire Workshop voor Zakelijk Netwerken</h5>
+                            <p>Versterk zakelijke relaties door samen een culinaire workshop te volgen, waarbij je leert koken met verse, lokale ingrediënten.</p>
+                            <a href="/arrangementen/culinaire-workshop.html" class="btn" style="background-color: #BF8268; color: white;">Inschrijven</a>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+</body>
+
+</html>
